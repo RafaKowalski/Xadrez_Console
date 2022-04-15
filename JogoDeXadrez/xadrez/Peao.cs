@@ -12,5 +12,10 @@ namespace tabuleiro.xadrez
         {
             return "p";
         }
+
+        public override bool[,] movimentosPossiveis()
+        {
+            return new bool[0, 0];
+        }
     }
 }
