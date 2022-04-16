@@ -29,7 +29,7 @@ namespace tabuleiro.xadrez
             {
                 mat[pos.Linha, pos.Coluna] = true;
                 if (Tab.peca(pos) != null && Tab.peca(pos).Cor != Cor)
-                break;
+                    break;
 
                 pos.Linha = pos.Linha - 1;
             }
@@ -40,7 +40,7 @@ namespace tabuleiro.xadrez
             {
                 mat[pos.Linha, pos.Coluna] = true;
                 if (Tab.peca(pos) != null && Tab.peca(pos).Cor != Cor)
-                break;
+                    break;
 
                 pos.Linha = pos.Linha + 1;
             }

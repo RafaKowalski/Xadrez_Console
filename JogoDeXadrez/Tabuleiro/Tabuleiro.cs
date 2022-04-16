@@ -32,9 +32,9 @@
         public void colocarPeca(Peca p, Posicao pos)
         {
             if (existePeca(pos))
-                throw new TabuleioException("Já existe uma peça nessa posição!");
+                throw new TabuleiroException("Já existe uma peça nessa posição!");
 
-            Pecas [pos.Linha, pos.Coluna] = p;
+            Pecas[pos.Linha, pos.Coluna] = p;
             p.Posicao = pos;
         }
 
@@ -42,7 +42,7 @@
         {
             if (peca(pos) == null)
                 return null;
-            
+
             Peca aux = peca(pos);
             aux.Posicao = null;
             Pecas[pos.Linha, pos.Coluna] = null;
@@ -58,10 +58,10 @@
                 return true;
         }
 
-        public void validarPosicao (Posicao pos)
+        public void validarPosicao(Posicao pos)
         {
             if (!posicaoValida(pos))
-                throw new TabuleioException("Posição inválida!");
+                throw new TabuleiroException("Posição inválida!");
         }
     }
 }

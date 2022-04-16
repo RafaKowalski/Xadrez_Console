@@ -5,7 +5,7 @@ namespace tabuleiro.xadrez
 {
     public class Rei : Peca
     {
-        public Rei(Cor cor, Tabuleiro tab) : base (cor, tab )
+        public Rei(Cor cor, Tabuleiro tab) : base(cor, tab)
         {
         }
         public override string ToString()
@@ -18,7 +18,7 @@ namespace tabuleiro.xadrez
             Peca p = Tab.peca(pos);
             return p == null || p.Cor != Cor;
         }
-        
+
         public override bool[,] movimentosPossiveis()
         {
             bool[,] mat = new bool[Tab.Linhas, Tab.Colunas];
@@ -27,7 +27,7 @@ namespace tabuleiro.xadrez
 
             //acima
             pos.definirValores(Posicao.Linha - 1, Posicao.Coluna);
-            if(Tab.posicaoValida(pos) && podeMover(pos))
+            if (Tab.posicaoValida(pos) && podeMover(pos))
                 mat[pos.Linha, pos.Coluna] = true;
 
             //nordeste

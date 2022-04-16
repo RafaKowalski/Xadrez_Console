@@ -8,17 +8,17 @@ namespace xadrez_console
     {
         public static void imprimirTabuleiro(Tabuleiro tab)
         {
-            for (int i = 0;i < tab.Linhas; i++)
+            for (int i = 0; i < tab.Linhas; i++)
             {
                 Console.Write(8 - i + " ");
 
-                for (int j = 0;j < tab.Colunas; j++)
+                for (int j = 0; j < tab.Colunas; j++)
                 {
                     imprimirPeca(tab.peca(i, j));
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine("  a b c d e f g h" );
+            Console.WriteLine("  a b c d e f g h");
         }
 
         public static void imprimirTabuleiro(Tabuleiro tab, bool[,] posicoesPossiveis)
@@ -33,9 +33,8 @@ namespace xadrez_console
 
                 for (int j = 0; j < tab.Colunas; j++)
                 {
-                    if(posicoesPossiveis[i,j] == true)
+                    if (posicoesPossiveis[i, j] == true)
                         Console.BackgroundColor = fundoAlterado;
-
                     else
                         Console.BackgroundColor = fundoOriginal;
 
